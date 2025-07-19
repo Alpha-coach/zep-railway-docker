@@ -6,7 +6,8 @@ ENV ZEP_LOG_LEVEL=info
 ENV ZEP_OPENAI_API_KEY=dummy_key_for_now
 ENV ZEP_LLM_SERVICE=none
 
-CMD [ "server" ]
+ENTRYPOINT [ "zep", "server" ]
+
 
 
 
