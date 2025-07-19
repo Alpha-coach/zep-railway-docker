@@ -1,6 +1,6 @@
 FROM ghcr.io/getzep/zep:latest
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# Передаём переменную окружения с точкой напрямую через Dockerfile
+ENV store.type=memory
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/app/zep"]
